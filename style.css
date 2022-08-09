@@ -3,3 +3,464 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+[class*="col-"] { padding: 0; margin: 0; }
+  [class*="grid-"] { padding: 0; margin: 0; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(60,60,65);
+  }
+
+  section {
+      padding: 5%;
+      margin: 5%;
+      text-align: left;
+      line-height: 1.3rem;
+  }
+
+  header {
+    padding: 1% 5%;
+    border-block: block;
+    background-color: black;
+  }
+
+    header img {
+      max-width: 40%;
+  }
+
+
+  header a {
+      border: 1px solid grey;
+      text-decoration: none;
+      color: white;
+      display: inline-block;
+      padding: 0.5rem;
+  }
+
+  
+  img {
+    max-width:100%;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+
+  footer nav a {
+    display:block;
+    padding: 0.25rem;
+    font-size: 0.9rem;
+  }
+  
+  footer {
+      background-color: black;
+      color: white;
+  }
+
+  /* ------------- Footer 2 ---------------------- */
+              
+              
+.inline a {
+    display:inline-block;
+    padding: 0.5rem;
+  }
+  
+              
+          
+  
+  
+  /* ------------- Utility Classes --------------  */
+  
+    .left     {  text-align: left;     }
+    .right    {  text-align: right;    }
+
+    .centered {  
+      text-align: center; 
+    }
+  
+  
+    .padded   {  padding: 5%;    }
+    .padded-05 {  padding: 0.5rem;  }
+    .padded-1 {  padding: 1rem;  }
+    .padded-2 {  padding: 2rem;  }
+    .padded-t { padding: 1.5rem;  }
+  
+    .capped-width { max-width: 1100px; margin: auto;}
+  
+    .tall-50  {  min-height: 50vh;   }
+    .tall-100 {  min-height: 100vh;  }
+  
+    .dark-bg      {  background-color: rgb(90, 90, 95);     }
+    .light-bg     {  background-color: rgb(240, 240, 245);  }
+    .featured-bg  {  background-color: #ffeaa7;             }
+  
+    .light-text   { color: white; }
+    .caps {text-transform: uppercase;}
+  
+  
+    .flex-flip:nth-child(2n){  flex-direction: row-reverse; }
+  
+      /* General typography */
+  
+      h2, h3, h4, h5, h6 {
+      line-height: 1;
+      margin-bottom: 0.8rem;
+      }
+
+      h4 {
+          margin: 2rem 0rem 1.1rem 0rem;
+      }
+
+      h5 {
+        color:#37b5fe;
+      }
+
+      p a {
+          text-decoration: underline;
+      }
+  
+      h2  { font-size: 2.2rem;  }
+      h3  { font-size: 1.8rem;  }
+      h4  { font-size: 1.4rem;  }
+      p   { font-size: 1rem;  }
+  
+      p, ul {
+       margin-bottom: 0.8rem;
+      }
+  
+      /* this makes sure that the last element in any container doesn't have margin-bottom */
+      h2:last-child,
+      h3:last-child,
+      h4:last-child,
+      h5:last-child,
+      h6:last-child,
+      p:last-child {
+      margin-bottom:0;
+      }
+  
+      hr { /* this is a line element */
+      border: none;
+      border-bottom: 3px solid;
+      width: 4rem;
+      margin-bottom: 1rem;
+      }
+  
+  
+      /* Unique Typography Styles */
+  
+      .emphasis {
+        font-size: 1.2rem;
+      }
+  
+      /* Button & Link Styles */
+  
+  
+      a:hover {
+          color: #37b5fe;
+      }
+      /* We have created lots of different button styles, you probably don't need to have quite this many styles depending on your site */
+  
+      .logo h2 {
+        font-size: 4rem;
+        font-weight: normal;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      
+      a:hover {
+        color: #37b5fe;
+      }
+
+
+      button:hover {
+        color: teal;
+        background-color: white;
+        border: 1px solid teal;
+      }
+
+
+      .button,
+      .button-solid,
+      .button-inverted {
+        text-decoration: none;
+        color: #37b5fe;
+        border: 2px solid;
+        padding: 0.6rem 2rem;
+        margin-top: 1rem;
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+  
+      .button:hover {
+        color: rgb(60, 60, 60);
+      }
+  
+      .button.inverted {   /* this is for a button on a dark background */
+        border: 2px solid white;
+        color: white;
+      }
+  
+      .button.inverted:hover {
+        color: #e67e22;
+        border-color: #e67e22;
+      }
+  
+      .button-solid {
+        background-color: #e67e22;
+        border-color: #e67e22;
+        color: white;
+      }
+  
+      .button-solid:hover {
+        background-color: rgb(60, 60, 60);
+        border-color: rgb(60, 60, 60);
+      }
+  
+
+
+
+/* ---------------------------Contact Form--------------------------------- */
+
+form input, form textarea {
+  width: 100%;
+  margin: 0.5rem 0;
+  border: 2px solid grey;
+  padding: 0.5rem;
+  outline: none;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+form input:focus, 
+form textarea:focus {
+  border-color: teal;
+}
+
+textarea {
+  min-height: 9rem;
+}
+
+form label {
+/*---- change label from default display inline-block to display: block to set custom margin ----*/
+display: block;
+margin-top: 1rem;
+  color: teal;
+  font-weight: bold;
+}
+
+form button {
+  background-color: teal;
+  color: white;
+  border: 1px solid white;
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+  letter-spacing: 0.5rem 0;
+}
+
+form p {
+  font-size: 0.8rem;
+}
+
+form p a {
+  text-decoration:underline;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+footer {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+
+
+
+
+img {
+  max-height: 100px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+
+.pointer {cursor: pointer;}
+
+/* ---------------------------------Random BackGround Classes Tests------------------------------------ */
+
+
+.guitar-lessons-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50%;
+}
+/*--- how to center an img in a div ------*/
+
+
+.white-bg {
+  background-color: white;
+}
+.black-text {
+  color: black;
+}
+
+.bg-featured {
+  background-image: url('/images/course-beginner-standard.png');
+}
+
+.bg-dark { 
+  background-color: black; 
+  color: white;
+}
+
+.block { 
+  display: block;
+}
+
+.borders {
+  border: 1px solid #37b5fe;
+}
+
+.text-blue {
+  color: #37b5fe;
+}
+
+.bg-blue {
+  background-color: #37b5fe;
+}
+
+.no-margin {
+  margin-bottom: 0;
+}
+
+.course-img { 
+max-height: 200px;
+max-width: 100%;
+text-align: center;
+ }
+
+ .contact-logo {
+  max-height: 150px;}
+
+  .subtle {
+    opacity: 0.8;
+    font-size: 0.8rem;
+  }
+
+  .red-text { color: red; }
+
+  .logo-1 { max-height: 100px;}
+
+
+
+
+
+
+  /* ------- XS Media Query (36em / 576px) --------------- */ 
+/* - Styles added here will apply at devices smaller than 576px, or zoomed in equivalent */ 
+
+@media (max-width: 36em) {
+    .show-xs { display: block; }
+    .hide-xs { display: none;  }
+  }
+  
+    /*--------------------- Responsiveness ---------------------------*/
+      /*--------------------- Responsiveness ---------------------------*/
+        /*--------------------- Responsiveness ---------------------------*/
+  
+  
+    /*--------------------- Hamburger-Menu CSS  ---------------------------*/
+  
+    li {
+      list-style: none;
+    }
+    
+    .navbar {
+      min-height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 24px;
+    }
+    
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+    }
+    
+    .nav-branding {
+      font-size: 2rem;
+    }
+    
+    .nav-link {
+      transition: 0.7s ease;
+    }
+    
+    .nav-link:hover{
+      color: orange;
+    }
+    
+    .hamburger {
+      cursor: pointer;
+      display: none;
+    }
+    
+    .bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      -webkit-transition: all 0.3s ease-in-out;
+      background-color: white;
+    }
+    
+    @media(max-width:768px){
+      .hamburger{
+        display: block;
+      }
+      
+      .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+      }
+      .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+      }
+        .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+      }
+      
+      .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: rgb(22, 19, 19);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+      }
+      
+      .nav-item {
+        margin: 16px 0;
+      }
+      
+      .nav-menu.active {
+        left: 0;
+      }
+    }
