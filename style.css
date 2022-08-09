@@ -369,21 +369,21 @@ text-align: center;
 
 
 
-
-  /* ------- XS Media Query (36em / 576px) --------------- */ 
-/* - Styles added here will apply at devices smaller than 576px, or zoomed in equivalent */ 
+/*------
+  /* ------- XS Media Query (36em / 576px) --------------- 
+/* - Styles added here will apply at devices smaller than 576px, or zoomed in equivalent  
 
 @media (max-width: 36em) {
     .show-xs { display: block; }
     .hide-xs { display: none;  }
   }
   
-    /*--------------------- Responsiveness ---------------------------*/
-      /*--------------------- Responsiveness ---------------------------*/
-        /*--------------------- Responsiveness ---------------------------*/
+    /*--------------------- Responsiveness ---------------------------
+      /*--------------------- Responsiveness ---------------------------
+        /*--------------------- Responsiveness ---------------------------
   
   
-    /*--------------------- Hamburger-Menu CSS  ---------------------------*/
+    /*--------------------- Hamburger-Menu CSS  ---------------------------
   
     li {
       list-style: none;
@@ -464,3 +464,5 @@ text-align: center;
         left: 0;
       }
     }
+    
+    -------*/
