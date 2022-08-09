@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Guitar Lessons
-course_selection:
+course_selection_beginner:
 -  instrument: Guitar
    level: Beginner
    course_title: (Standard)
@@ -40,6 +40,44 @@ course_selection:
    day_2: N/A
    time_1: 18:00 - 20:00
    time_2: N/A
+timetable:
+-  weekday: Monday
+   startdate: starting 02.05.2022
+   link_1: https://www.ryaninglis.com/beginnercourses
+   time_1: 19:00 - 20:00
+   course_name_1: Beginner (Standard)
+   link_2: N/A
+   time_2: N/A
+   course_name_2: N/A
+-  weekday: Tuesday
+   startdate: starting 03.05.2022
+   link_1: https://www.ryaninglis.com/7b505b11-2a9b-4c0b-a392-3b04384e9bc1
+   time_1: 18:00 - 19:00
+   course_name_1: Intermediate (1)
+   link_2: https://www.ryaninglis.com/c7a1b21e-721c-4013-845a-aa4805ec4a77
+   time_2: 19:00 - 20:00
+   course_name_1: Beginner (Standard)
+-  weekday: Wednesday
+   startdate: starting 04.05.2022
+   link_1: https://www.ryaninglis.com/course-guitar-fingerpicking
+   link_2: https://www.ryaninglis.com/intermediate1
+   course_name_1: Fingerpicking (1)
+   course_name_2: Intermediate (1)
+   time_1: 18:00 - 19:00 
+   time_2: 19:00 - 20:00 
+-  weekday: Thursday
+   startdate: starting 05.05.2022
+   link_1: https://www.ryaninglis.com/beginnerukulele
+   time_1: 18:00 - 19:00
+   course_name_1: Ukulele (Standard)
+-  weekday: Friday
+   startdate: starting 06.05.2022
+   link_1: https://www.ryaninglis.com/course-guitar-reading-notes
+   link_2: https://www.ryaninglis.com/bollywoodbeginner
+   course_name_1: Beginner (Reading Notes)
+   course_name_2: Beginner (Bollywood)
+   time_1: 18:00 - 19:00 
+   time_2: 19:00 - 20:00 
 ---
 
 
@@ -59,7 +97,7 @@ course_selection:
       <p>These 8-week courses are perfect for first time players who want to learn the basics of guitar and ukulele while playing real songs straight away. </p>
   </div>
 
-  {% for item in page.course_selection %}
+  {% for item in page.course_selection_beginner %}
   <div class="col-3_sm-12 padded-2"> 
     <img src="{{item.course_image}}" class="course-img">
        <h4>{{item.instrument}} <br> {{item.level}} <br> {{item.course_title}}</h4>
@@ -68,30 +106,7 @@ course_selection:
        <a href="{{item.link_2}}" target=”_blank” class="button block"> {{item.day_2}}<br> {{item.time_2}}</a>
    </div>
    {% endfor %}
-   <!-----
-   <div class="col-3_sm-12 padded-2"> 
-     <img src="/images/guitar-beginner-bollywood.png" class="course-img">
-      <h4>Guitar <br> Beginner <br> (Bollywood)</h4>
-      <p>Covering essential chords, rhythms, melodies, music theory and ear training whilst 
-         learning popular Hindi songs.</p> 
-      <a href="https://www.ryaninglis.com/bollywoodbeginner" target=”_blank” class="button block"> Fridays<br> 19:00 - 20:00</a>
-      <a href="https://www.ryaninglis.com/bollywoodbeginner" target=”_blank” class="button block"> Fridays<br> 20:00 - 21:00</a>
-      </div>
-      <div class="col-3_sm-12 padded-2"> 
-        <img src="/images/course-reading-notes.png" class="course-img">
-          <h4>Guitar <br> Beginner <br> (Reading Notes)</h4>
-          <p>Play the guitar AND read basic music notation with fun challenges and modern 
-              popular songs focusing on playing easy melodies.</p> 
-          <a href="https://www.ryaninglis.com/course-guitar-reading-notes" target=”_blank” class="button block"> Fridays<br> 18:00 - 19:00</a>
-      </div>
-       <div class="col-3_sm-4_xs-12 padded-2"> 
-        <img src="/images/ukulele-beginner.png" class="course-img">
-           <h4>Ukulele <br> Beginner <br> (Standard)</h4>
-           <p>Start from the very beginning with Bruder Jakob and work your way up to 
-              playing Hallelujah and more than 30 other COMPLETE songs.</p> 
-          <a href="https://www.ryaninglis.com/beginnerukulele" target=”_blank” class="button"> Thursdays <br>18:00 - 19:00</a>
-      </div>
-      -->
+
   </section>
   
       <!---------------------------------Content INTERMEDIATE --------------------------------->
@@ -163,42 +178,21 @@ course_selection:
         <!---------------------------------Content TIMETABLE--------------------------------->
   
   <section class="grid-spaceAround"> 
-        <div class="col-12 centered padded-1 bg-dark">
-          <h2> Timetable</h2>
-          <p> Spring Term starting Monday,  2nd of May 2022 </p>
-          </div>
-  
-      <div class="col-2_sm-4_xs-12 padded-05"> 
-          <h4>Mondays</h4>
-          <h5>starting 02.05.2022</h5>
-          <a href="https://www.ryaninglis.com/beginnercourses" target=”_blank”><p> 19:00 - 20:00 <br> Beginner (Standard)</p></a>
-          <a href="https://www.ryaninglis.com/course-guitar-intermediate-lv3" target=”_blank”><p> 20:00 - 21:00 <br> Intermediate (3)</p></a>
+      <div class="col-12 centered padded-1 bg-dark">
+        <h2> Timetable</h2>
+        <p> Spring Term starting Monday,  2nd of May 2022 </p>
       </div>
+
+    <!---------------------------------Content JEKYLL--------------------------------->
+    {% for item in page.timetable %}
       <div class="col-2_sm-4_xs-12 padded-05"> 
-          <h4>Tuesdays</h4>
-          <h5>starting 03.05.2022</h5>
-          <a href="https://www.ryaninglis.com/7b505b11-2a9b-4c0b-a392-3b04384e9bc1" target=”_blank”><p> 18:00 - 19:00 <br> Intermediate (1) </p></a>
-          <a href="https://www.ryaninglis.com/c7a1b21e-721c-4013-845a-aa4805ec4a77" target=”_blank”><p> 19:00 - 20:00 <br> Beginner (Standard)</p></a>
-          <a href="https://www.ryaninglis.com/intermediate2" target=”_blank”><p> 20:00 - 21:00 <br> Intermediate (2) </p></a>
-      </div>
-      <div class="col-2_sm-4_xs-12 padded-05"> 
-          <h4>Wednesdays</h4>
-          <h5>starting 04.05.2022</h5>
-          <a href="https://www.ryaninglis.com/course-guitar-fingerpicking" target=”_blank”><p> 18:00 - 19:00 <br> Fingerpicking (1)</p></a>
-          <a href="https://www.ryaninglis.com/intermediate1" target=”_blank”><p> 19:00 - 20:00 <br> Intermediate (1) </p></a>
-      </div>
-      <div class="col-2_sm-4_xs-12 padded-05"> 
-          <h4>Thursdays</h4>
-          <h5>starting 05.05.2022</h5>
-          <a href="https://www.ryaninglis.com/beginnerukulele" target=”_blank”><p> 18:00 - 19:00 <br> Ukulele (Standard) </p></a>
-      </div>
-      <div class="col-2_sm-4_xs-12 padded-05"> 
-        <h4>Friday</h4>
-        <h5>starting 06.05.2022</h5>
-        <a href="https://www.ryaninglis.com/course-guitar-reading-notes" target=”_blank”><p>18:00 - 19:00 <br> Beginner (Reading Notes) </p></a>
-        <a href="https://www.ryaninglis.com/bollywoodbeginner" target=”_blank”><p> 19:00 - 20:00 <br> Beginner (Bollywood) </p></a>
-        <a href="https://www.ryaninglis.com/bollywoodbeginner" target=”_blank”><p> 20:00 - 21:00 <br> Beginner (Bollywood) </p></a>
+        <h4>{{item.weekday}}</h4>
+        <h5>{{item.startdate}}</h5>
+        <a href="{{link_1}}" target=”_blank”><p> {{time_1}} <br> {{course_name_1}}</p></a>
+        <a href="{{link_2}}" target=”_blank”><p> {{time_2}} <br> {{course_name_2}}</p></a>
     </div>
+    {% endfor %}
   </section>
-  
-  
+
+    <!---------------------------------Content JEKYLL END--------------------------------->
+ 
