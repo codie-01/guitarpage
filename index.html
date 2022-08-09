@@ -1,39 +1,45 @@
 ---
 layout: default
 title: Guitar Lessons
-courseselection:
+course_selection:
 -  instrument: Guitar
    level: Beginner
-   coursetitle: (Standard)
-   coursedescription: Learn 10 well-known songs, 10 essential chords, how to read tablature, basic strumming patterns, basic finger and plectrum picking, the major scale, basic improvisation and ear training essentials.
-   day1: Mondays
-   time1: 19:00 - 20:00
-   day2: Tuesdays
-   time2: 19:00 - 20:00
+   course_title: (Standard)
+   course_image: /images/course-beginner-standard.png
+   course_description: Learn 10 well-known songs, 10 essential chords, how to read tablature, basic strumming patterns, basic finger and plectrum picking, the major scale, basic improvisation and ear training essentials.
+   day_1: Mondays
+   time_1: 19:00 - 20:00
+   link_1: https://www.ryaninglis.com/beginnercourses
+   day_2: Tuesdays
+   time_2: 19:00 - 20:00
+   link_2: https://www.ryaninglis.com/c7a1b21e-721c-4013-845a-aa4805ec4a77
 -  instrument: Guitar
    level: Beginner
-   coursetitle: (Bollywood)
-   coursedescription: Covering essential chords, rhythms, melodies, music theory and ear training whilst learning popular Hindi songs.
-   day1: Fridays
-   day2: N/A
-   time1: 19:00 - 20:00
-   time2: N/A
+   course_title: (Bollywood)
+   course_image: /images/guitar-beginner-bollywood.png
+   course_description: Covering essential chords, rhythms, melodies, music theory and ear training whilst learning popular Hindi songs.
+   day_1: Fridays
+   day_2: N/A
+   time_1: 19:00 - 20:00
+   time_2: N/A
 -  instrument: Guitar
    level: Beginner
-   coursetitle: (Reading Notes)
-   coursedescription: Play the guitar AND read basic music notation with fun challenges and modern popular songs focusing on playing easy melodies.
-   day1: Fridays
-   day2: N/A
-   time1: 18:00 - 19:00
-   time2: N/A
+   course_title: (Reading Notes)
+   course_image: /images/course-reading-notes.png
+   course_description: Play the guitar AND read basic music notation with fun challenges and modern popular songs focusing on playing easy melodies.
+   day_1: Fridays
+   day_2: N/A
+   time_1: 18:00 - 19:00
+   time_2: N/A
 -  instrument: Ukulele
    level: Beginner
-   coursetitle: (Standard)
-   coursedescription: Start from the very beginning with Bruder Jakob and work your way up to playing Hallelujah and more than 30 other COMPLETE songs.
-   day1: Thursdays
-   day2: N/A
-   time1: 18:00 - 20:00
-   time2: N/A
+   course_title: (Standard)
+   course_image: /images/ukulele-beginner.png
+   course_description: Start from the very beginning with Bruder Jakob and work your way up to playing Hallelujah and more than 30 other COMPLETE songs.
+   day_1: Thursdays
+   day_2: N/A
+   time_1: 18:00 - 20:00
+   time_2: N/A
 ---
 
 
@@ -53,13 +59,13 @@ courseselection:
       <p>These 8-week courses are perfect for first time players who want to learn the basics of guitar and ukulele while playing real songs straight away. </p>
   </div>
 
-  {% for item in page.courseselection %}
+  {% for item in page.course_selection %}
   <div class="col-3_sm-12 padded-2"> 
-    <img src="/images/course-beginner-standard.png" class="course-img">
-       <h4>{{item.instrument}} <br> {{item.level}} <br> {{item.coursetitle}}</h4>
-       <p> {{item.coursedescription}}</p> 
-       <a href="https://www.ryaninglis.com/beginnercourses" target=”_blank” class="button block"> {{item.day1}}<br> {{item.time1}}</a>
-       <a href="https://www.ryaninglis.com/c7a1b21e-721c-4013-845a-aa4805ec4a77" target=”_blank” class="button block"> {{item.day2}}<br> {{item.time2}}</a>
+    <img src="{{item.course_image}}" class="course-img">
+       <h4>{{item.instrument}} <br> {{item.level}} <br> {{item.course_title}}</h4>
+       <p> {{item.course_description}}</p> 
+       <a href="{{item.link_1}}" target=”_blank” class="button block"> {{item.day_1}}<br> {{item.time_1}}</a>
+       <a href="{{item.link_2}}" target=”_blank” class="button block"> {{item.day_2}}<br> {{item.time_2}}</a>
    </div>
    {% endfor %}
    <!-----
