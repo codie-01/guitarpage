@@ -446,6 +446,20 @@ text-align: center;
         align-items: center;
         padding: 0 24px;
       }
+
+      .navbar a {
+        border: none;
+      }
+
+      .navbar a:hover {
+        border-bottom: 1px solid #37b5fe;
+        transition: none;
+      }
+
+      .navbar img {
+        max-width: 200px;
+      }
+
       
       .nav-menu {
         display: flex;
@@ -456,13 +470,14 @@ text-align: center;
       .nav-branding {
         font-size: 2rem;
       }
+
       
       .nav-link {
         transition: 0.7s ease;
       }
       
       .nav-link:hover{
-        color: orange;
+        color: #37b5fe;
       }
       
       .hamburger {

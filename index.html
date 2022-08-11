@@ -9,10 +9,10 @@ course_selection_beginner:
    course_description: Learn 10 well-known songs, 10 essential chords, how to read tablature, basic strumming patterns, basic finger and plectrum picking, the major scale, basic improvisation and ear training essentials.
    day_1: Mondays
    time_1: 19:00 - 20:00
-   link_1: https://www.ryaninglis.com/beginnercourses
+   link_1: https://ryaninglis.podia.com/beginnercourses
    day_2: Tuesdays
    time_2: 19:00 - 20:00
-   link_2: https://www.ryaninglis.com/c7a1b21e-721c-4013-845a-aa4805ec4a77
+   link_2: https://ryaninglis.podia.com/c7a1b21e-721c-4013-845a-aa4805ec4a77
 -  instrument: Guitar
    level: Beginner
    course_title: (Bollywood)
@@ -21,7 +21,7 @@ course_selection_beginner:
    day_1: Fridays
    day_2: Fully Booked
    time_1: 19:00 - 20:00
-   time_2: Fully Booked
+   time_2: 
 -  instrument: Guitar
    level: Beginner
    course_title: (Reading Notes)
@@ -30,16 +30,16 @@ course_selection_beginner:
    day_1: Fridays
    day_2: Fully Booked
    time_1: 18:00 - 19:00
-   time_2: Fully Booked
+   time_2: 
 -  instrument: Ukulele
    level: Beginner
    course_title: (Standard)
    course_image: /images/ukulele-beginner.png
    course_description: Start from the very beginning with Bruder Jakob and work your way up to playing Hallelujah and more than 30 other COMPLETE songs.
    day_1: Thursdays
-   day_2: Booked Out
+   day_2: Fully Booked
    time_1: 18:00 - 20:00
-   time_2: Fully Booked
+   time_2: 
 timetable:
 -  weekday: Monday
    startdate: starting 26.09.2022
@@ -194,7 +194,7 @@ timetable:
 
     <!---------------------------------Content JEKYLL--------------------------------->
     {% for item in page.timetable %}
-      <div class="col-2_sm-4_xs-12 padded-05"> 
+      <div class="col-2_sm-4_xs-12 padded-2"> 
         <h4>{{item.weekday}}</h4>
         <h5>{{item.startdate}}</h5>
         <a href="{{item.link_1}}" target=”_blank”><p> {{item.time_1}} <br> {{item.course_name_1}}</p></a>
