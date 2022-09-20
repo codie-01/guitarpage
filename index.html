@@ -225,4 +225,37 @@ timetable:
   </section>
 
     <!---------------------------------Content JEKYLL END--------------------------------->
- 
+
+    <section  class="padded-2 grid-spaceAround"> 
+
+      <div class="col-12 centered padded-1 bg-blue">
+        <h2> Contact Form</h2>
+        <p> Send me a message </p>
+      </div>
+      
+      <form action="https://formspree.io/f/xnqwvroz"
+      method="POST">
+      
+        <label for="_name"> Your Name </label>
+        <input  type="text" 
+                name="_name" 
+                id="_name" 
+                placeholder="Name"/>
+                                         
+       <label for="_replyto"> Your Email </label>                         
+      <input  type="email" 
+               name="_replyto"
+               placeholder="Email"/>
+        
+        <label for="message"> Your message:</label>
+      <textarea name="message"
+                id="message"
+                placeholder="Hello!"></textarea>
+      
+                <p> I agree to the collection, processing and use of my personal data (details, date and time of contact, referrer URL, browser type, IP address) for the purpose of establishing contact and determining the effectiveness of advertising. For more information see our <a href="/datenschutzerklärung.html">privacy policy</a>.</p>
+    
+      <button type="submit" class="pointer"> AGREE AND SUBMIT </button>
+    
+        
+      </form>
+      </section>
