@@ -352,6 +352,12 @@ img {
   background-color: #37b5fe;
 }
 
+.bg-blue2 {
+  
+  color: #37b5fe;
+  padding: 1rem;
+}
+
 .no-margin {
   margin-bottom: 0;
 }
